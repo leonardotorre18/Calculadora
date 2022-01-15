@@ -1,0 +1,77 @@
+:root {
+    --first-color: rgb(20, 20, 20);
+    --second-color: rgb(49, 33, 122);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: sans-serif;
+}
+body {
+    background-color: var(--first-color);
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+input, button {
+    outline: none;
+    border: none;
+    background-color: #00000000;
+}
+
+.calculator {
+    width: 400px;
+    border: 2px solid var(--second-color);
+    box-shadow: 10px 10px 1px  var(--second-color);
+    padding: 7px;
+    margin: 10vh auto;
+}
+.calculator .pantalla {
+    border: 2px solid var(--second-color);
+    padding: 8px 20px;
+    text-align: right;
+    font-size: 2em;
+    font-family: consolas;
+    letter-spacing: 3px;
+}
+.calculator .buttons {
+    display: flex;
+}
+.calculator .buttons .numbersContainer,
+.calculator .buttons .operationContainer {
+    padding: 8px;
+}
+.calculator .buttons .numbersContainer {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+}
+.calculator .buttons .operationContainer {
+    width: 25%;
+}
+.calculator .buttons .numbers,
+.calculator .buttons .operation {
+    border: 2px solid var(--second-color);
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 2em;
+}
+@media screen and (max-width: 450px) and (orientation: portrait) {
+    .calculator {
+        margin: 10vh 10px;
+        width: 90%;
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .calculator {
+        width: 600px;
+        font-size: 23px;
+        margin: 5vh auto;
+    }
+}
